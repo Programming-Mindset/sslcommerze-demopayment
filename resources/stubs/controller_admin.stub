@@ -1,0 +1,97 @@
+<?php
+
+namespace {{namespace}};
+
+use {{rootNamespace}}Models\{{model}};
+use Illuminate\View\View;
+use Illuminate\Routing\Redirector;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Contracts\View\Factory;
+use App\Http\Controllers\Admin\AdminController;
+
+class {{class}} extends AdminController
+{
+	/**
+	 * Display a listing of {{resource}}.
+	 *
+	 * @return Factory|View
+	 */
+	public function index()
+	{
+		save_resource_url();
+
+		return $this->view('{{viewPath}}.index', [
+            'items' => {{model}}::all()
+        ]);
+	}
+
+	/**
+	 * Show the form for creating a new {{resource}}.
+	 *
+	 * @return Factory|View
+	 */
+	public function create()
+	{
+		return $this->view('{{viewPath}}.create_edit');
+	}
+
+	/**
+	 * Store a newly created {{resource}} in storage.
+	 *
+	 * @return RedirectResponse|Redirector
+	 */
+	public function store({{model}}Request $request)
+	{
+        ${{resource}} = $this->createEntry({{model}}::class, $request->validated());
+
+        return redirect_to_resource();
+	}
+
+	/**
+	 * Display the specified {{resource}}.
+	 *
+	 * @param {{model}} ${{resource}}
+	 * @return Factory|View
+	 */
+	public function show({{model}} ${{resource}})
+	{
+		return $this->view('{{viewPath}}.show')->with('item', ${{resource}});
+	}
+
+	/**
+	 * Show the form for editing the specified {{resource}}.
+	 *
+	 * @param {{model}} ${{resource}}
+     * @return Factory|View
+     */
+    public function edit({{model}} ${{resource}})
+	{
+		return $this->view('{{viewPath}}.create_edit')->with('item', ${{resource}});
+	}
+
+	/**
+	 * Update the specified {{resource}} in storage.
+	 *
+	 * @param {{model}}  ${{resource}}
+     * @return RedirectResponse|Redirector
+     */
+    public function update({{model}}Request $request, {{model}} ${{resource}})
+	{
+        ${{resource}} = $this->updateEntry(${{resource}}, $request->validated());
+
+        return redirect_to_resource();
+	}
+
+	/**
+	 * Remove the specified {{resource}} from storage.
+	 *
+	 * @param {{model}}  ${{resource}}
+	 * @return RedirectResponse|Redirector
+	 */
+	public function destroy({{model}} ${{resource}})
+	{
+		$this->deleteEntry(${{resource}}, request());
+
+        return redirect_to_resource();
+	}
+}

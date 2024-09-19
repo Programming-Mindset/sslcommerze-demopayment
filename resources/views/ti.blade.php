@@ -1,0 +1,1 @@
+./resources/views/ti.blade.php

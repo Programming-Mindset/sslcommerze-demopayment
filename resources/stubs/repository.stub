@@ -1,0 +1,13 @@
+<?php
+
+namespace {{namespace}};
+
+use App\Models\{{model}};
+
+class {{class}}
+{
+    public function all()
+    {
+        return {{model}}::all();
+    }
+}

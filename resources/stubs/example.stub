@@ -1,0 +1,41 @@
+<?php
+
+// App\Foo
+namespace {{namespace}};
+
+// App\
+use {{rootNamespace}};
+
+// Bar
+class {{class}}
+{
+	// /foo/bar
+	protected $url = '{{url}}';
+
+	// bars
+	protected $collection = '{{collection}}';
+
+	// Bars
+	protected $collectionUpper = '{{collectionUpper}}';
+
+	// Bar
+	protected $model = '{{model}}';
+
+	// Bar
+	protected $resource = '{{resource}}';
+
+	// bar
+    protected $resourceLowercase = '{{resourceLowercase}}';
+
+	// ./resources/views/foo/bar.blade.php
+	protected $path = '{{path}}';
+
+	// foos.bars
+	protected $view = '{{view}}';
+
+	// foos.bars (if admin or website is first - it gets removed)
+	protected $view = '{{viewPath}}';
+
+	// bars
+	protected $table = '{{table}}';
+}
