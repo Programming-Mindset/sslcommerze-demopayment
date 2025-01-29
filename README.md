@@ -11,16 +11,21 @@
    `php artisan serve`
 
 ## Payment Screenshots
-<img src="https://raw.githubusercontent.com/arif98741/sslcommerz-laravel-demo-js-example/master/screenshot/payment-page.png" style="width: 60%; height: 60%">
+<img src="https://raw.githubusercontent.com/Programming-Mindset/sslcommerze-demopayment/refs/heads/master/images/payment.png" >
 <br>
 <br>
-<img src="https://raw.githubusercontent.com/arif98741/sslcommerz-laravel-demo-js-example/master/screenshot/payment-popup.png" style="width: 60%; height: 60%">
+<img src="https://raw.githubusercontent.com/Programming-Mindset/sslcommerze-demopayment/refs/heads/master/images/ssl-gateways.png" >
 <br>
 <br>
-<img src="https://raw.githubusercontent.com/arif98741/sslcommerz-laravel-demo-js-example/master/screenshot/gateway-page.png" style="width: 60%; height: 60%">
+<img src="https://raw.githubusercontent.com/Programming-Mindset/sslcommerze-demopayment/refs/heads/master/images/success.png" >
 <br>
 <br>
-<img src="https://raw.githubusercontent.com/arif98741/sslcommerz-laravel-demo-js-example/master/screenshot/payment-success-response.png" style="width: 60%; height: 60%">
+<img src="https://raw.githubusercontent.com/Programming-Mindset/sslcommerze-demopayment/refs/heads/master/images/success-invoice.png" >
+<br>
+<br>
+<img src="https://raw.githubusercontent.com/Programming-Mindset/sslcommerze-demopayment/refs/heads/master/images/failed-invoice.png" >
+<br>
+<br>
 
 <br>
 <br>
